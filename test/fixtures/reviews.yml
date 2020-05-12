@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_content: MyText
+  crowded: 
+  social_distance: false
+  go_no: false
+  likes: 1
+
+two:
+  user_content: MyText
+  crowded: 
+  social_distance: false
+  go_no: false
+  likes: 1
