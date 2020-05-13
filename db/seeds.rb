@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.create([first_name: "Michael", last_name:"Fox", email:"michael.c.fox.ii@gmail.com", about_me:"Aspiring Web Developer, Wannabe Foodie", password_digest:"password"])
+users = User.create([first_name: "Michael", last_name:"Fox", email:"michael.c.fox.ii@gmail.com", about_me:"Aspiring Web Developer, Wannabe Foodie", password_digest:"password", location_id:"1"])
 
-destinations = Destination.create([name:"Rocco's Tacos", description:"Tacos and Tequila Bar", destination_type:"restaurant"])
+destinations = Destination.create([name:"Rocco's Tacos", description:"Tacos and Tequila Bar", destination_type:"restaurant", location_id:"1"])
 
 locations = Location.create([{city_name: "Naples", state_name:"Florida", country_name: "United States"}, {city_name: "New York", state_name: "New York", country_name: "United States"}])
 
