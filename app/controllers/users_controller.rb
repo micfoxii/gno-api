@@ -3,8 +3,8 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    # @users = User.all
-    users_json = UserSerializer
+    @users = User.all
+    # users_json = UserSerializer
     render json: @users
     
   end
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   def show
     # render json: @user
     user_json = UserSerializer.new(@user).serialized_json
-    render user_json
+    render json: user_json
 
   end
 
