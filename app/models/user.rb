@@ -1,6 +1,7 @@
 class User < ApplicationRecord
-    has_secure_password 
+    # has_secure_password 
     has_many :reviews
+    has_many :destinations, through: :reviews
     belongs_to :location, class_name: "Location"
 
     # validates :first_name, presence: true
