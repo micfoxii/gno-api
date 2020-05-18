@@ -13,14 +13,14 @@ class SessionsController < ApplicationController
         end
     end
 
-    def getCurrentUser = () => {
+    def getCurrentUser
         if logged_in?
             render json: current_user
         else
             render json: {
                 error: "Please Login"
             }
-        }
+        end
     end
 
 
