@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
 
     def get_current_user
         if logged_in?
-            render json: current_user
+            render json: User.new(current_user)
         else
             render json: {
                 error: "Please Login"

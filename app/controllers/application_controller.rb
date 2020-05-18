@@ -2,12 +2,12 @@ class ApplicationController < ActionController::API
 
     include ::ActionController::Cookies
 
-    def current_user
+    def get_current_user
         User.find_by(id: session[:user_id])
     end 
 
     def logged_in?
-        !!current_user
+        !!get_current_user
     end
     
 end
