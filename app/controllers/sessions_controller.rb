@@ -24,7 +24,10 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-        clear
+        session.clear
+        render json: {
+            notice: "you are no longer logged in"
+        }, status: :ok
     end
 
 end
