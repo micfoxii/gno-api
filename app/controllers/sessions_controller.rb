@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
     end
 
     def get_current_user
+        # byebug
         if logged_in?
             render json: User.new(current_user)
         else
