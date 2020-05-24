@@ -10,7 +10,8 @@ class LocationsController < ApplicationController
 
   # GET /locations/1
   def show
-    render json: @location
+    location_json = LocationSerializer.new(@location).serialized_json
+    render json: location_json
   end
 
   # POST /locations
