@@ -5,7 +5,8 @@ class LocationsController < ApplicationController
   def index
     @locations = Location.all
 
-    render json: @locations
+    locations_json = LocationSerializer.new(@locations).serialized_json
+    render json: locations_json, status: 200
   end
 
   # GET /locations/1
