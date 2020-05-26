@@ -5,12 +5,14 @@ class DestinationsController < ApplicationController
   def index
     @destinations = Destination.all
 
-    render json: @destinations
+    destinations_json = DestinationSerializer.new(@destinations).serialized_json
+    render json: destinations_json, status: 200
   end
 
   # GET /destinations/1
   def show
-    render json: @destination
+    destination_json = DestinationSerializer.new(@destination).serialized_json
+    render json: destination_json
   end
 
   # POST /destinations
